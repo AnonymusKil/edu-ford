@@ -1,0 +1,107 @@
+  <nav class="mobile" data-aos="fade-down">
+      <h1>Billio</h1>
+      <ul>
+        <li><a href="#"> Home </a></li>
+        <li><a href="#"> About</a></li>
+        <li><a href="#"> Services</a></li>
+        <li><a href="#"> Team</a></li>
+        <li><a href="#"> Contact</a></li>
+      </ul>
+      <div class="toggle">
+        <div class="line">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+    </nav>
+    <header data-aos="fade-down" data-aos-duration="1500">
+      <div>
+        <h1>Billio</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Services</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Features</a></li>
+          <li><a href="">Reviews</a></li>
+          <li><a href="">Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+
+
+
+    mobile
+     nav.mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: column;
+  /* background-color: white; */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  /* height: 3rem; */
+  transition: all 0.3s ease-in-out;
+  height: 2.8rem;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  overflow: hidden;
+  /* position: fixed; */
+  ul {
+    display: flex;
+    align-items: center !important;
+    flex-direction: column;
+    /* gap: 1rem; */
+    list-style: none;
+    /* height: 5rem; */
+    a {
+      color: black;
+      text-decoration: none;
+      transition: color 0.3s ease-in-out;
+    }
+  }
+}
+nav.mobile ul a:hover {
+  color: #007bff;
+}
+.toggle {
+  position: absolute;
+  right: 5px;
+  height: 2.8rem;
+}
+nav.open {
+  height: auto !important;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.toggle.open {
+  height: auto !important;
+  transition: all 1s linear;
+  overflow: hidden;
+}
+.line i {
+  border: 1px solid black;
+  font-size: 2rem;
+}
+header {
+  display: none;
+}
+
+
+const toggle = document.querySelector(".toggle");
+const nav = document.querySelector("nav");
+let open = false
+
+toggle.addEventListener("click", () => {
+    open = !open
+    if (open) {
+        toggle.classList.add("open");
+        nav.classList.add("open");
+      } else {
+        toggle.classList.remove("open");
+        nav.classList.remove("open");
+      }
+})
