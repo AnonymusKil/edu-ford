@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 /* Global Styles */
 * {
   padding: 0;
@@ -8,7 +10,9 @@
 body {
   font-family: Arial, sans-serif;
 }
-
+h1 {
+  font-family: "Poppins", sans-serif;
+}
 /* Mobile Navigation */
 nav.mobile {
   display: flex;
@@ -95,7 +99,9 @@ header {
   line-height: 1.4;
 }
 .container {
-  background-image: url(eduford_img/banner.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("eduford_img/banner.png");
+  /* background-image: url(eduford_img/banner.png); */
   background-size: cover;
   min-height: 70vh;
 }
@@ -104,16 +110,27 @@ header {
   justify-content: center;
   margin-top: 1rem;
 }
-.sides button {
+/* .sides button {
   padding: 10px;
   border: 1px solid white;
   background-color: transparent;
+  
+} */
+
+.sides button {
+  padding: 12px 18px;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 .sides button:hover {
   background-color: #ff0000;
   color: white;
 }
-.line-1 {
+/* .line-1 {
   width: 45px;
   height: 8px;
   background-color: white;
@@ -122,6 +139,13 @@ header {
   width: 45px;
   height: 8px;
   background-color: white;
+} */
+.line-1,
+.line-2 {
+  width: 45px;
+  height: 6px;
+  background-color: white;
+  margin: 5px;
 }
 
 /* Desktop View */
@@ -129,19 +153,28 @@ header {
   nav.mobile {
     display: none;
   }
-  ul {
-    display: block;
-  }
+
   header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
   }
-  ul li a {
-    color: black;
+  ol {
+    color: white;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 1rem;
+  }
+  a:hover {
+    text-decoration: #ff0000;
+    transition: all 0.3s ease-in-out;
   }
   .container {
     min-height: 100vh;
     background-size: cover;
+    /* padding: 2rem; */
   }
   .first {
     /* padding: 4.5rem; */
@@ -149,5 +182,16 @@ header {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 3rem;
+  }
+
+  .first h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  .first p {
+    font-size: 1.2rem;
+    margin-top: 10px;
   }
 }
