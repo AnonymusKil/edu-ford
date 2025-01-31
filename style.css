@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
   padding: 0;
   margin: 0;
@@ -8,40 +9,44 @@ body {
   font-family: Arial, sans-serif;
 }
 
+/* Mobile Navigation */
 nav.mobile {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  /* background-color: white;
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
-  z-index: 1000; */
+  width: 100%;
+  z-index: 1000;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav.mobile img {
-  width: 100px; /* Adjust logo size */
+  width: 100px;
 }
 
+/* Sidebar Menu */
 ul {
   position: fixed;
   top: 0;
-  left: -100%; /* Initially off-screen */
+  right: -100%;
   width: 70%;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: #ff0000;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   list-style: none;
-  margin-top: 4rem;
-  transition: left 0.3s ease;
+  transition: right 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: none;
 }
 
 ul.open {
-  left: 0; /* Slide in from left */
+  right: 0;
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
 }
 
 ul li {
@@ -59,39 +64,33 @@ ul li a:hover {
   color: #007bff;
 }
 
+/* Hamburger Icon */
 .toggle {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 25px;
-  height: 20px;
+  font-size: 2rem;
   cursor: pointer;
+  transition: transform 0.3s ease-in-out;
 }
 
-.toggle div {
-  width: 100%;
-  height: 3px;
-  background-color: #333;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+.toggle i {
+  font-size: 2rem;
+  color: #333;
+  transition: transform 0.3s ease-in-out;
 }
 
-.toggle.open div:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+/* Rotate Icon on Click */
+.toggle.open i {
+  transform: rotate(90deg);
 }
 
-.toggle.open div:nth-child(2) {
-  opacity: 0;
-}
-
-.toggle.open div:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
-
+/* Hide Desktop Navigation */
 header {
   display: none;
 }
 
+/* Desktop View */
 @media (min-width: 1024px) {
   nav.mobile {
     display: none;
