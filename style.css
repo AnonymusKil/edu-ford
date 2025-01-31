@@ -18,9 +18,9 @@ nav.mobile {
   position: sticky;
   top: 0;
   width: 100%;
-  z-index: 1000;
+  /* z-index: 1000;
   background-color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
 }
 
 nav.mobile img {
@@ -28,7 +28,7 @@ nav.mobile img {
 }
 
 /* Sidebar Menu */
-ul {
+nav ul {
   position: fixed;
   top: 0;
   right: -100%;
@@ -49,11 +49,11 @@ ul.open {
   box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
 }
 
-ul li {
+nav ul li {
   margin: 1rem 0;
 }
 
-ul li a {
+nav li a {
   color: #fff;
   text-decoration: none;
   font-size: 1.5rem;
@@ -89,11 +89,48 @@ ul li a:hover {
 header {
   display: none;
 }
+.first {
+  text-align: center;
+  color: white;
+  line-height: 1.4;
+}
+.container {
+  background-image: url(eduford_img/banner.png);
+  background-size: cover;
+  min-height: 70vh;
+}
+.sides {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.sides button {
+  padding: 10px;
+  border: 1px solid white;
+  background-color: transparent;
+}
+.sides button:hover {
+  background-color: #ff0000;
+  color: white;
+}
+.line-1 {
+  width: 45px;
+  height: 8px;
+  background-color: white;
+}
+.line-2 {
+  width: 45px;
+  height: 8px;
+  background-color: white;
+}
 
 /* Desktop View */
 @media (min-width: 1024px) {
   nav.mobile {
     display: none;
+  }
+  ul {
+    display: block;
   }
   header {
     display: flex;
@@ -101,5 +138,16 @@ header {
   }
   ul li a {
     color: black;
+  }
+  .container {
+    min-height: 100vh;
+    background-size: cover;
+  }
+  .first {
+    /* padding: 4.5rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 }
