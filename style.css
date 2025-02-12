@@ -83,7 +83,7 @@ ul li a:hover {
 
 .toggle i {
   font-size: 2rem;
-  color: #333;
+  color: white;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -357,6 +357,10 @@ header {
 .footer {
   width: 100%;
   text-align: center;
+  background-color: #333333 ;
+  padding: 1.3rem;
+  margin-top: 1rem;
+  color: white;
   /* padding: 30px 0; */
 }
 
