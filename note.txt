@@ -1,109 +1,94 @@
-  <nav class="mobile" data-aos="fade-down">
-      <h1>Billio</h1>
-      <ul>
-        <li><a href="#"> Home </a></li>
-        <li><a href="#"> About</a></li>
-        <li><a href="#"> Services</a></li>
-        <li><a href="#"> Team</a></li>
-        <li><a href="#"> Contact</a></li>
-      </ul>
-      <div class="toggle">
-        <div class="line">
-          <i class="ri-menu-line"></i>
-        </div>
-      </div>
-    </nav>
-    <header data-aos="fade-down" data-aos-duration="1500">
-      <div>
-        <h1>Billio</h1>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">Services</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Features</a></li>
-          <li><a href="">Reviews</a></li>
-          <li><a href="">Blog</a></li>
-        </ul>
-      </nav>
-    </header>
+.last-part-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 auto;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+}
 
+.last-part-container img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 8px;
+}
 
+.last-part-container > div {
+  flex: 1;
+  min-width: 300px;
+}
 
-    mobile
-     nav.mobile {
+.last-part-container h1 {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+}
+
+.last-part-container p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.form-sides {
+  margin-top: 2rem;
+}
+
+.form-sides h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.form-sides input,
+.form-sides textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Categories Section */
+aside {
   display: flex;
   justify-content: space-between;
-  align-items: start;
-  flex-direction: column;
-  /* background-color: white; */
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
-  background-color: white;
-  /* height: 3rem; */
-  transition: all 0.3s ease-in-out;
-  height: 2.8rem;
-  padding: 1rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  overflow: hidden;
-  /* position: fixed; */
-  ul {
-    display: flex;
-    align-items: center !important;
+  align-items: center;
+  background: #f8f8f8;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+aside p {
+  margin: 0;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .last-part-container {
     flex-direction: column;
-    /* gap: 1rem; */
-    list-style: none;
-    /* height: 5rem; */
-    a {
-      color: black;
-      text-decoration: none;
-      transition: color 0.3s ease-in-out;
-    }
+    gap: 1rem;
   }
-}
-nav.mobile ul a:hover {
-  color: #007bff;
-}
-.toggle {
-  position: absolute;
-  right: 5px;
-  height: 2.8rem;
-}
-nav.open {
-  height: auto !important;
-  transition: all 0.3s ease-in-out;
-  overflow: hidden;
-}
 
-.toggle.open {
-  height: auto !important;
-  transition: all 1s linear;
-  overflow: hidden;
+  .last-part-container img {
+    max-width: 100%;
+  }
 }
-.line i {
-  border: 1px solid black;
-  font-size: 2rem;
-}
-header {
-  display: none;
-}
-
-
-const toggle = document.querySelector(".toggle");
-const nav = document.querySelector("nav");
-let open = false
-
-toggle.addEventListener("click", () => {
-    open = !open
-    if (open) {
-        toggle.classList.add("open");
-        nav.classList.add("open");
-      } else {
-        toggle.classList.remove("open");
-        nav.classList.remove("open");
-      }
-})
-
-london,newyork,washington
